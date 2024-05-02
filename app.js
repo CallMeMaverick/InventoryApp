@@ -45,9 +45,13 @@ module.exports = app;
 
 const mongoose = require("mongoose");
 // Explicit Node.JS driver is provided for the sake of example
-const mongoDB = "mongodb+srv://admin:admin@cluster0.wa1qfm6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoDB = "mongodb+srv://admin:admin@cluster0.wa1qfm6.mongodb.net/Phones?retryWrites=true&w=majority&appName=Cluster0";
 
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
 }
+
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("MongoDB connected successfully"))
+    .catch(err => console.error("MongoDB connection error:", err));
