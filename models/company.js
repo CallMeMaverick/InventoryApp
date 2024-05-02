@@ -8,4 +8,8 @@ const CompanySchema = new Schema({
     wikiUrl: { type: String, required: true }
 })
 
+CompanySchema.virtual("url").get(function() {
+    return `/catalog/company/${this._id}`;
+})
+
 module.exports = mongoose.model("Company", CompanySchema);
