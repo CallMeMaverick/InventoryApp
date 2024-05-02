@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 Companies
+
+    div
+        ul
+            if companies && companies.length > 0
+                for company in companies
+                    li
+                        a(href=company.url) #{company.name}
