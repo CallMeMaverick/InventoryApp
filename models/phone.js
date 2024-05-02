@@ -13,4 +13,4 @@ PhoneSchema.virtual("url").get(function() {
     return `/home/catalog/${this._id}`
 })
 
-module.exports = mongoose.model("Phone", PhoneSchema);
+module.exports = mongoose.model("Phones", PhoneSchema, "phones");
