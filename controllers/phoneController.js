@@ -21,7 +21,6 @@ exports.index = asyncHandler(async (request, response) => {
 
 exports.phone_list = asyncHandler(async (request, response) => {
     const phones = await Phone.find();
-    console.log(phones);
     response.render("phone_view", { header: "Phone list", phoneList: phones })
 })
 
