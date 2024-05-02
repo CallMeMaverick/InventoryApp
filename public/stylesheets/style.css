@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
 }
 
 .side-bar {
@@ -30,17 +46,21 @@ hr {
     font-size: 20px;
 }
 
+.list > ul > li {
+    margin: 10px;
+}
+
 .list > ul > li > * {
     text-decoration: none;
     color: #0473d8;
 }
 
-.list > ul > li > a {
+a {
     text-decoration: none;
     color: #0473d8;
 }
 
-.list > ul > li > a:hover {
+a:hover {
     color: dodgerblue;
 }
 
@@ -62,4 +82,20 @@ svg:hover {
 
 .github-link:hover {
     background-color: dodgerblue;
+}
+
+.content {
+    margin: 20px;
+}
+
+.content > h1 {
+    margin: 20px;
+}
+
+.index-content li {
+    margin: 20px;
+}
+
+li {
+    margin: 20px;
 }

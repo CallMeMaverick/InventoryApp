@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= header
+
+    if phoneList && phoneList.length > 0
+        ul
+            each phone in phoneList
+                li
+                    a(href=phone.url) Model: #{phone.name}
+                    | Price: $#{phone.price}
+    else
+        p No phones available
