@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  div(class="index-content")
+    ul
+      li Number of phones: #{numPhones}
+      li Number of companies selling phones: #{numCompanies}
+      li Number of available phones: #{numAvailablePhoneInstance}
