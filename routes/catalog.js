@@ -13,4 +13,6 @@ router.get('/catalog/:id', phoneController.phone_detail);
 
 router.get('/brands', companyController.company_list);
 
+router.get("/brands/:id", companyController.company_detail)
+
 module.exports = router;
