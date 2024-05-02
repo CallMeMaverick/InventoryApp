@@ -37,7 +37,7 @@ exports.phone_detail = asyncHandler(async (request, response, next) => {
     } else {
         response.render("phone_detail", {
             phone: phone,
-            phoneInstances: PhoneInstances
+            phoneInstances: phoneInstances
         })
     }
 })

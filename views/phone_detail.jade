@@ -2,16 +2,17 @@ extends layout
 
 block content
     h1 Model: #{phone.name}
+    p #{phone.company.name}
     p #{phone.description}
 
-    //div(class="copies")
-    //    ul
-    //        if phoneInstances && phoneInstances.length > 3
-    //            each copy in phoneInstances
-    //                hr
-    //                if copy.status
-    //                    if copy.status === "Available"
-    //                        p.available Available
-    //                    else if copy.status === "Currently Unavailable"
-    //                        p.unavailable Unavailable
+    div(class="copies")
+        ul
+            //if phoneInstances && phoneInstances.length > 0
+            //    each copy in phoneInstances
+            //        hr
+            //        if copy.status
+            //            if copy.status === "Available"
+            //                p.available Available
+            //            else if copy.status === "Currently Unavailable"
+            //                p.unavailable Unavailable
 
