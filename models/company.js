@@ -9,7 +9,7 @@ const CompanySchema = new Schema({
 })
 
 CompanySchema.virtual("url").get(function() {
-    return `/catalog/company/${this._id}`;
+    return `/home/brands/${this._id}`;
 })
 
 module.exports = mongoose.model("Company", CompanySchema);

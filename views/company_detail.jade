@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 Company #{company.name}
+    p #{company.description}
+
+    div
+        ul
+            if companiesPhones && companiesPhones.length > 0
+                for phone in companiesPhones
+                    li
+                        a(href=phone.url) #{phone.name}, $#{phone.price}
