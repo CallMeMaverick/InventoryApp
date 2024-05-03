@@ -25,6 +25,6 @@ block content
     if (err)
         ul
             each error in err
-                li!= error
+                li.error  --> #{error.msg}
 
 
