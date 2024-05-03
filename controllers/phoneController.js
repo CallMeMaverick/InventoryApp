@@ -78,11 +78,12 @@ exports.create_post = [
 
     asyncHandler(async (request, response, next) => {
         const errors = validationResult(request);
+        const companyList = await Company.find().exec();
 
         if (!errors.isEmpty()) {
             response.render("create_model", {
                 title: "Create model",
-                companyList: request.body.companyList,
+                companyList: companyList,
                 err: errors.array()
             })
         } else {
@@ -100,7 +101,7 @@ exports.create_post = [
                     description: request.body.description
                 });
                 await model.save();
-                return response.redirect(model.url); // Adjusted to correct typo
+                return response.redirect(model.url);
             }
         }
     })
