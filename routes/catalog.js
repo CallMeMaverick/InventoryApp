@@ -19,4 +19,8 @@ router.get('/model/create', phoneController.create_get);
 
 router.post('/model/create', phoneController.create_post);
 
+router.get('/brand/create', companyController.create_get);
+
+router.post('/brand/create', companyController.create_post);
+
 module.exports = router;
