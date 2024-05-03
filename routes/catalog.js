@@ -15,4 +15,8 @@ router.get('/brands', companyController.company_list);
 
 router.get("/brands/:id", companyController.company_detail)
 
+router.get('/model/create', phoneController.create_get);
+
+router.post('/model/create', phoneController.create_post);
+
 module.exports = router;
